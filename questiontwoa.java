@@ -39,3 +39,7 @@ public class questiontwoa {
         System.out.println(minRewards(ratings2)); // Output: 4
     }
 }
+
+
+
+

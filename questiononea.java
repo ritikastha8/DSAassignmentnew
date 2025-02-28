@@ -22,3 +22,13 @@ public class questiononea {
         System.out.println(minMeasurements(3, 14)); // Output: 4
     }
 }
+
+
+
+
+
+
+
+
+
+

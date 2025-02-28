@@ -31,12 +31,12 @@ public class questiononeb {
             if (i == k - 1) {
                 return current.product;
             }
-
             // Next in the first array
             if (current.index1 + 1 < returns1.length) {
                 String nextIndex = (current.index1 + 1) + "-" + current.index2;
                 if (!visited.contains(nextIndex)) {
-                    minHeap.offer(new Pair(returns1[current.index1 + 1] * returns2[current.index2], current.index1 + 1, current.index2));
+                    minHeap.offer(new Pair(returns1[current.index1 + 1] * returns2[current.index2], 
+                    current.index1 + 1, current.index2));
                     visited.add(nextIndex);
                 }
             }
@@ -45,12 +45,12 @@ public class questiononeb {
             if (current.index2 + 1 < returns2.length) {
                 String nextIndex = current.index1 + "-" + (current.index2 + 1);
                 if (!visited.contains(nextIndex)) {
-                    minHeap.offer(new Pair(returns1[current.index1] * returns2[current.index2 + 1], current.index1, current.index2 + 1));
+                    minHeap.offer(new Pair(returns1[current.index1] * returns2[current.index2 + 1], 
+                    current.index1, current.index2 + 1));
                     visited.add(nextIndex);
                 }
             }
         }
-
         return -1; // This line should never be reached if k is valid
     }
 
